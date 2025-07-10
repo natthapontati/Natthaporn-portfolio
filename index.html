@@ -3,72 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Natthaporn Tatiyarattanapinun - Portfolio</title>
+  <title>Natthaporn Portfolio</title>
   <style>
+    /* Reset & base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #333;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-    main {
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
-    section {
-      margin-bottom: 3rem;
-    }
-    h2 {
-      border-bottom: 3px solid #333;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      color: #333;
-    }
-    ul {
-      list-style: inside disc;
-      padding-left: 0;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #fff;
+      color: #222;
+      scroll-behavior: smooth;
     }
     a {
-      color: #333;
+      color: #222;
       text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.3s ease;
     }
     a:hover {
-      text-decoration: underline;
+      border-bottom-color: #555;
     }
+
+    /* Navbar */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #fff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #eee;
+      z-index: 1000;
+    }
+    nav .logo {
+      font-weight: 700;
+      font-size: 1.3rem;
+      letter-spacing: 1.2px;
+      color: #222;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li {
+      cursor: pointer;
+      font-weight: 500;
+    }
+
+    /* Sections */
+    section {
+      max-width: 720px;
+      margin: 5rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      font-weight: 700;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 2px solid #ccc;
+      padding-bottom: 0.4rem;
+      color: #222;
+    }
+
+    /* About */
+    #about p {
+      font-size: 1.05rem;
+      color: #444;
+      max-width: 620px;
+    }
+
+    /* Skills */
+    #skills ul {
+      list-style: none;
+      columns: 2;
+      column-gap: 3rem;
+      color: #555;
+      font-weight: 400;
+    }
+    #skills ul li {
+      margin-bottom: 0.8rem;
+      position: relative;
+      padding-left: 1.2rem;
+    }
+    #skills ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #999;
+      font-weight: 700;
+    }
+
+    /* Projects */
+    #projects .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      gap: 2rem;
+    }
+    .project-card {
+      background: #fafafa;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 1.2rem;
+      transition: background-color 0.25s ease;
+    }
+    .project-card:hover {
+      background-color: #f0f0f0;
+    }
+    .project-card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+      filter: grayscale(10%);
+      transition: filter 0.3s ease;
+    }
+    .project-card:hover img {
+      filter: grayscale(0%);
+    }
+    .project-card h3 {
+      margin-bottom: 0.6rem;
+      font-weight: 600;
+      color: #222;
+    }
+    .project-card p {
+      font-size: 0.95rem;
+      color: #555;
+      line-height: 1.3;
+    }
+
+    /* Contact */
+    #contact p {
+      font-size: 1rem;
+      max-width: 600px;
+      color: #444;
+      margin-bottom: 0.6rem;
+    }
+    #contact a {
+      font-weight: 600;
+    }
+
+    /* Footer */
     footer {
-      background-color: #222;
-      color: #eee;
       text-align: center;
-      padding: 1rem 0;
+      padding: 3rem 1rem;
+      color: #888;
+      font-size: 0.9rem;
+      background-color: #fff;
+      border-top: 1px solid #eee;
+      margin-top: 6rem;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Natthaporn Tatiyarattanapinun</h1>
-  <p>Data Analyst | Business Analyst | Data Scientist</p>
-</header>
+  <nav>
+    <div class="logo">Natthaporn T.</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
 
-<main>
   <section id="about">
     <h2>About Me</h2>
-    <p>Hi, I'm Natthaporn Tatiyarattanapinun. I aim to leverage data to solve business challenges effectively. With skills in Python, SQL, and Power BI, I've worked on various projects, including sentiment analysis, application development, and data visualization.</p>
+    <p>Hello! I'm Natthaporn Tatiyarattanapinun, passionate about data analytics, visualization, and creating actionable insights. I enjoy solving business problems using data-driven approaches.</p>
   </section>
 
   <section id="skills">
@@ -76,43 +183,43 @@
     <ul>
       <li>Python (Beautiful Soup, Scikit-learn, Ensemble models)</li>
       <li>SQL (Database management and querying)</li>
-      <li>Power BI (Dashboard creation and data analysis)</li>
-      <li>Web scraping</li>
-      <li>Data Annotation</li>
-      <li>Data Visualization</li>
+      <li>Power BI & Tableau (Dashboard & Reporting)</li>
+      <li>Web Scraping & Data Annotation</li>
+      <li>Data Visualization & Analysis</li>
     </ul>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-
-    <div class="project">
-      <h3>Sentiment Analysis for Amazon Reviews</h3>
-      <p>Utilized Python and Beautiful Soup for web scraping Amazon reviews, annotated data for model training, and employed ensemble voting to enhance accuracy. This project aids in understanding customer sentiments effectively.</p>
-    </div>
-
-    <div class="project">
-      <h3>Attendance Check Application</h3>
-      <p>Developed an application for tracking class attendance, integrated with SQL databases for student and attendance management, and implemented real-time status checks and reporting functionalities.</p>
-    </div>
-
-    <div class="project">
-      <h3>Alumni Donation Analysis with Power BI</h3>
-      <p>Analyzed alumni donation data and created dashboards using Power BI to display trends and statistics, assisting management in strategic planning and decision-making.</p>
+    <div class="grid">
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x160?text=Sentiment+Analysis" alt="Sentiment Analysis Project" />
+        <h3>Sentiment Analysis for Amazon Reviews</h3>
+        <p>Used Python & Beautiful Soup for web scraping Amazon reviews, annotated data, and built ensemble voting models to analyze customer sentiment.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x160?text=Attendance+App" alt="Attendance Check App" />
+        <h3>Attendance Check Application</h3>
+        <p>Developed an attendance tracking app connected to SQL database with real-time status reporting for educational purposes.</p>
+      </div>
+      <div class="project-card">
+        <img src="https://via.placeholder.com/400x160?text=Power+BI+Dashboard" alt="Alumni Donation Dashboard" />
+        <h3>Alumni Donation Analysis with Power BI</h3>
+        <p>Created dashboards analyzing alumni donations to help management understand trends and make strategic decisions.</p>
+      </div>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>GitHub: <a href="https://github.com/YOUR_GITHUB_USERNAME" target="_blank" rel="noopener noreferrer">https://github.com/YOUR_GITHUB_USERNAME</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener noreferrer">https://linkedin.com/in/YOUR_LINKEDIN</a></p>
-    <p>Email: <a href="mailto:YOUR_EMAIL@example.com">YOUR_EMAIL@example.com</a></p>
+    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>GitHub: <a href="https://github.com/natthapontati" target="_blank">github.com/natthapontati</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">linkedin.com/in/YOUR_LINKEDIN</a></p>
   </section>
-</main>
 
-<footer>
-  <p>© 2025 Natthaporn Tatiyarattanapinun. All rights reserved.</p>
-</footer>
+  <footer>
+    <p>© 2025 Natthaporn Tatiyarattanapinun. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
