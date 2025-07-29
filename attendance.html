@@ -1,44 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Attendance App</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Attendance Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9fafb;
+      color: #111;
+    }
+
+    header {
+      padding: 1.5rem;
+      text-align: center;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    .colab-link {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-size: 0.95rem;
+      text-decoration: none;
+      color: #3B82F6;
+      border: 1px solid #3B82F6;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.25rem;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .colab-link:hover {
+      background: #3B82F6;
+      color: #fff;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    th {
+      background-color: #f3f4f6;
+    }
+
+    button {
+      padding: 0.4rem 0.8rem;
+      border: none;
+      background-color: #3B82F6;
+      color: white;
+      border-radius: 0.25rem;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #2563eb;
+    }
+  </style>
 </head>
-
 <body>
-  <nav>
-    <div class="logo">Attendance App</div>
-    <ul>
-      <li><a href="index.html">Back to Portfolio</a></li>
-    </ul>
-  </nav>
+  <header>
+    <h1>Attendance Checker</h1>
+    <a class="colab-link" href="https://colab.research.google.com/drive/1kLTdpA7GhmpPutlqAZltVvblJIj6Zi1N?usp=sharing" target="_blank">
+      🔗 Open in Google Colab
+    </a>
+  </header>
 
-  <section class="hero">
-    <h1>Attendance Check Application</h1>
-    <p>A Python + SQL-based academic tracking system</p>
-  </section>
-
-  <section class="project-details">
-    <h2>Goal</h2>
-    <p>To build a student attendance and grade tracking system for instructors and students without a GUI, but with database integration for realistic simulation.</p>
-
-    <h2>Features</h2>
-    <ul>
-      <li>Student and instructor login system</li>
-      <li>Instructors can search for students, input scores, and adjust grading criteria</li>
-      <li>Students can check scores and attendance records</li>
-      <li>SQL database used to store and manage all data</li>
-    </ul>
-
-    <h2>Result</h2>
-    <p>The app successfully simulates a real-world education platform backend using pure Python and SQL, offering modular, testable, and scalable code.</p>
-  </section>
-  <footer>
-    <p>&copy; 2025 Natthaporn Tatiyarattanapinun. All rights reserved.</p>
-  </footer>
+  <main>
+    <h2>Class: Intro to Data Science</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Name</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1001</td>
+          <td>Somchai S.</td>
+          <td><button>Present</button></td>
+        </tr>
+        <tr>
+          <td>1002</td>
+          <td>Suda T.</td>
+          <td><button>Present</button></td>
+        </tr>
+        <tr>
+          <td>1003</td>
+          <td>Krit N.</td>
+          <td><button>Present</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
 </body>
-
 </html>
