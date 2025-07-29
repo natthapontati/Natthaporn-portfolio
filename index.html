@@ -1,72 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Natthaporn Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Natthaporn Tatiyarattanapinun - Portfolio</title>
+  <style>
+    :root {
+      --primary-color: #111;
+      --secondary-color: #555;
+      --accent-color: #3B82F6;
+      --bg-color: #fff;
+      --text-color: #111;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 2rem;
+      text-align: center;
+      background-color: #f8f8f8;
+      border-bottom: 1px solid #eee;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+    header p {
+      color: var(--secondary-color);
+      margin-top: 0.5rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project {
+      margin-bottom: 1.5rem;
+    }
+
+    .project h3 {
+      margin: 0;
+      font-size: 1.2rem;
+      color: var(--accent-color);
+    }
+
+    .project a {
+      text-decoration: none;
+      color: var(--accent-color);
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: var(--secondary-color);
+      border-top: 1px solid #eee;
+      background-color: #f9f9f9;
+    }
+  </style>
 </head>
-
 <body>
-  <nav>
-    <div class="logo">Natthaporn T.</div>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header>
+    <h1>Natthaporn Tatiyarattanapinun</h1>
+    <p>Data Analyst | Business Analyst | Data Science Student</p>
+  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm Natthaporn Tatiyarattanapinun, passionate about data analytics, visualization, and creating actionable insights. I enjoy solving business problems using data-driven approaches.</p>
-  </section>
+  <main>
+    <section class="section">
+      <h2>About Me</h2>
+      <p>I'm a data-driven problem solver with a background in computer science and business. I specialize in using Python, SQL, and BI tools to extract insights and deliver value. Currently pursuing Canadian business credentials in Vancouver.</p>
+    </section>
 
-  <section id="skills">
-    <h2>Skills</h2>
-    <ul>
-      <li>Python (Beautiful Soup, Scikit-learn, Ensemble models)</li>
-      <li>SQL (Database management and querying)</li>
-      <li>Power BI & Tableau (Dashboard & Reporting)</li>
-      <li>Web Scraping & Data Annotation</li>
-      <li>Data Visualization & Analysis</li>
-    </ul>
-  </section>
+    <section class="section">
+      <h2>Projects</h2>
 
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="project-card">
-        <img src="https://via.placeholder.com/400x160?text=Sentiment+Analysis" alt="Sentiment Analysis Project" />
-        <h3>Sentiment Analysis for Amazon Reviews</h3>
-        <p>Used Python & Beautiful Soup for web scraping Amazon reviews, annotated data, and built ensemble voting models to analyze customer sentiment.</p>
+      <div class="project">
+        <h3><a href="attendance.html">Attendance Check Application</a></h3>
+        <p>Python + SQL project simulating a school management system with login roles for students and teachers.</p>
       </div>
-      <div class="project-card">
-        <a href="attendance.html">
-          <img src="https://via.placeholder.com/400x160?text=Attendance+App" alt="Attendance Check App" />
-          <h3>Attendance Check Application</h3>
-          <p>Developed an attendance tracking app connected to SQL database with real-time status reporting for educational purposes.</p>
-        </a>
-      </div>
-      <div class="project-card">
-        <img src="https://via.placeholder.com/400x160?text=Power+BI+Dashboard" alt="Alumni Donation Dashboard" />
-        <h3>Alumni Donation Analysis with Power BI</h3>
-        <p>Created dashboards analyzing alumni donations to help management understand trends and make strategic decisions.</p>
-      </div>
-    </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:natthapontati@gmail.com">natthapontati@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/natthapontati" target="_blank">github.com/natthapontati</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">linkedin.com/in/YOUR_LINKEDIN</a></p>
-  </section>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 Natthaporn Tatiyarattanapinun. All rights reserved.</p>
-  </footer>
+    <section class="section">
+      <h2>Contact</h2>
+      <p>Email: natthapon.tati@hotmail.com</p>
+      <p>Location: Vancouver, Canada</p>
+    </section>
+  </main>
 </body>
 </html>
