@@ -1,168 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Natthaporn Portfolio</title>
-  <style>
-    /* Reset & base */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #fff;
-      color: #222;
-      scroll-behavior: smooth;
-    }
-    a {
-      color: #222;
-      text-decoration: none;
-      border-bottom: 1px solid transparent;
-      transition: border-color 0.3s ease;
-    }
-    a:hover {
-      border-bottom-color: #555;
-    }
-
-    /* Navbar */
-    nav {
-      position: sticky;
-      top: 0;
-      background-color: #fff;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      z-index: 1000;
-    }
-    nav .logo {
-      font-weight: 700;
-      font-size: 1.3rem;
-      letter-spacing: 1.2px;
-      color: #222;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 2rem;
-    }
-    nav ul li {
-      cursor: pointer;
-      font-weight: 500;
-    }
-
-    /* Sections */
-    section {
-      max-width: 720px;
-      margin: 5rem auto;
-      padding: 0 1rem;
-    }
-    h2 {
-      font-weight: 700;
-      font-size: 1.8rem;
-      margin-bottom: 1.2rem;
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 0.4rem;
-      color: #222;
-    }
-
-    /* About */
-    #about p {
-      font-size: 1.05rem;
-      color: #444;
-      max-width: 620px;
-    }
-
-    /* Skills */
-    #skills ul {
-      list-style: none;
-      columns: 2;
-      column-gap: 3rem;
-      color: #555;
-      font-weight: 400;
-    }
-    #skills ul li {
-      margin-bottom: 0.8rem;
-      position: relative;
-      padding-left: 1.2rem;
-    }
-    #skills ul li::before {
-      content: "•";
-      position: absolute;
-      left: 0;
-      color: #999;
-      font-weight: 700;
-    }
-
-    /* Projects */
-    #projects .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-      gap: 2rem;
-    }
-    .project-card {
-      background: #fafafa;
-      border: 1px solid #eee;
-      border-radius: 6px;
-      padding: 1.2rem;
-      transition: background-color 0.25s ease;
-    }
-    .project-card:hover {
-      background-color: #f0f0f0;
-    }
-    .project-card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 4px;
-      margin-bottom: 1rem;
-      filter: grayscale(10%);
-      transition: filter 0.3s ease;
-    }
-    .project-card:hover img {
-      filter: grayscale(0%);
-    }
-    .project-card h3 {
-      margin-bottom: 0.6rem;
-      font-weight: 600;
-      color: #222;
-    }
-    .project-card p {
-      font-size: 0.95rem;
-      color: #555;
-      line-height: 1.3;
-    }
-
-    /* Contact */
-    #contact p {
-      font-size: 1rem;
-      max-width: 600px;
-      color: #444;
-      margin-bottom: 0.6rem;
-    }
-    #contact a {
-      font-weight: 600;
-    }
-
-    /* Footer */
-    footer {
-      text-align: center;
-      padding: 3rem 1rem;
-      color: #888;
-      font-size: 0.9rem;
-      background-color: #fff;
-      border-top: 1px solid #eee;
-      margin-top: 6rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
   <nav>
     <div class="logo">Natthaporn T.</div>
     <ul>
@@ -198,9 +44,11 @@
         <p>Used Python & Beautiful Soup for web scraping Amazon reviews, annotated data, and built ensemble voting models to analyze customer sentiment.</p>
       </div>
       <div class="project-card">
-        <img src="https://via.placeholder.com/400x160?text=Attendance+App" alt="Attendance Check App" />
-        <h3>Attendance Check Application</h3>
-        <p>Developed an attendance tracking app connected to SQL database with real-time status reporting for educational purposes.</p>
+        <a href="attendance.html">
+          <img src="https://via.placeholder.com/400x160?text=Attendance+App" alt="Attendance Check App" />
+          <h3>Attendance Check Application</h3>
+          <p>Developed an attendance tracking app connected to SQL database with real-time status reporting for educational purposes.</p>
+        </a>
       </div>
       <div class="project-card">
         <img src="https://via.placeholder.com/400x160?text=Power+BI+Dashboard" alt="Alumni Donation Dashboard" />
@@ -212,14 +60,13 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    <p>Email: <a href="mailto:natthapontati@gmail.com">natthapontati@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/natthapontati" target="_blank">github.com/natthapontati</a></p>
     <p>LinkedIn: <a href="https://linkedin.com/in/YOUR_LINKEDIN" target="_blank">linkedin.com/in/YOUR_LINKEDIN</a></p>
   </section>
 
   <footer>
-    <p>© 2025 Natthaporn Tatiyarattanapinun. All rights reserved.</p>
+    <p>&copy; 2025 Natthaporn Tatiyarattanapinun. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
